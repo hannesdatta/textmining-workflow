@@ -3,19 +3,14 @@
 # Installation instructions: http://tilburgsciencehub.com/setup
 
 
-prep: ../../gen/data-preparation/output/dataset.csv
+analyze: ../../gen/analysis/output/analysis.html
 
-../../data/fortnite-rawdata.zip: download.py
-	python download.py
+../../gen/analysis/temp/preclean.csv: preclean.R ../../gen/data-preparation/output/dataset.csv
+	R --vanilla --args "" < "preclean.R"
 
-../../gen/data-preparation/temp/unzipping.log: unzip.py ../../data/fortnite-rawdata.zip
-	python unzip.py
 
-../../gen/data-preparation/temp/parsed-data.csv: parse.py ../../gen/data-preparation/temp/unzipping.log
-	python parse.py
-
-../../gen/data-preparation/output/dataset.csv: textmining.py ../../gen/data-preparation/temp/parsed-data.csv
-	python textmining.py
+../../gen/analysis/output/analysis.html: analysis.Rmd ../../gen/analysis/temp/preclean.csv
+	R -e "rmarkdown::render('analysis.Rmd', output_file = '../../gen/analysis/output/analysis.html')"
 
 wipe:
 	python wipe.py

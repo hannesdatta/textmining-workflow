@@ -1,5 +1,4 @@
-# Example of a reproducible research worflow: 
-# JSON parsing and text mining in Python, R + RMarkdown
+# Example of a reproducible research worflow: JSON parsing and text mining in Python, R + RMarkdown
 
 This is a basic example workflow using GNU Make, Python and R for a reproducible research workflow, following the principles of [tilburgsciencehub.com](http://tilburgsciencehub.com/workflow).
 

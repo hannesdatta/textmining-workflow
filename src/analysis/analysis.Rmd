@@ -1,0 +1,42 @@
+---
+title: "Analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(data.table)
+library(ggplot2)
+
+# read final data
+dt <- fread('../../gen/analysis/temp/preclean.csv')
+```
+
+## Some rudimentary analysis in Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button in RStudio,a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. 
+
+You can also **knit** the document from the command line, see the example in the `makefile`.
+
+
+### Summary statistics
+
+```{r}
+summary(dt)
+```
+
+### Plots
+
+```{r}
+hist(dt$polarity)
+```
+
+```{r}
+# Overlaid histograms
+ggplot(dt, aes(x=polarity, color=retweet)) +
+  geom_histogram(fill="white", alpha=0.5, position="identity") + ggtitle('Some histogram')
+```
+

@@ -8,10 +8,13 @@ data.head()
 
 for i, j in data.iterrows():
     print(i)
-    blob = TextBlob(j['text'])
-    data.loc[i, 'polarity'] = blob.sentiment.polarity
-    data.loc[i, 'subjectivity'] = blob.sentiment.subjectivity
-
+    try:
+        blob = TextBlob(j['text'])
+        data.loc[i, 'polarity'] = blob.sentiment.polarity
+        data.loc[i, 'subjectivity'] = blob.sentiment.subjectivity
+    except:
+        data.loc[i, 'polarity'] = ''
+        data.loc[i, 'subjectivity'] = ''
 
 data.head()
 

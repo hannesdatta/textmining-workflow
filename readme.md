@@ -15,20 +15,27 @@ The main aim of this repository is to have a clean and basic structure, which ca
 ## Dependencies
 - Python via the Anaconda distribution
 - TextBlob via `pip install -U textblob`
+- NLTK dictionaries; open Python, then type
+  ```
+  import nltk
+  nltk.download('Punkt')
+  ```
+  
 - Gnu Make
 - R and the following packages:
 
 ```
-install.packages(c("stargazer", "knitr", "data.table"))
+install.packages(c("stargazer", "knitr", "data.table", "ggplot2"))
 ```
 
-Detailed installation instructions can be found here: [tilburgsciencehub.com](http://tilburgsciencehub.com/)
+Detailed installation instructions can be found here: [tilburgsciencehub.com/tutorial](http://tilburgsciencehub.com/tutorial)
 
-## How to run
+## How to get started
+Please follow [our tutorial](http://tilburgsciencehub.com/tutorial)
+
 - Download this repository (either by forking and then cloning, or as a template)
 - Open Terminal in project's main directory, type make
 - The src/data-preparation and src/analysis directories contain the specific workflow for each stage of the pipeline.
-
 - Tested on Mac and Windows 10
 
 - Many possible improvements remain. Comments and contributions are welcome!

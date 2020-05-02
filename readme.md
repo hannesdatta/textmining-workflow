@@ -1,6 +1,6 @@
 # Example of a reproducible research worflow: JSON parsing and text mining in Python, R + RMarkdown
 
-This is a basic example workflow using GNU Make, Python and R for a reproducible research workflow, following the principles of [tilburgsciencehub.com](http://tilburgsciencehub.com/workflow).
+This is a basic example workflow using GNU Make, Python and R for a reproducible research workflow, following the principles of [tilburgsciencehub.com](http://tilburgsciencehub.com/workflow). Please use this template in combination with our tutorial at [http://tilburgsciencehub.com/tutorial](http://tilburgsciencehub.com/tutorial).
 
 The main aim of this repository is to have a clean and basic structure, which can be easily adjusted to use in an actual project. In this example project, the following is done:
 - Pipeline stage "data-preparation"
@@ -31,7 +31,7 @@ install.packages(c("stargazer", "knitr", "data.table", "ggplot2"))
 Detailed installation instructions can be found here: [tilburgsciencehub.com/tutorial](http://tilburgsciencehub.com/tutorial)
 
 ## How to get started
-Please follow [our tutorial](http://tilburgsciencehub.com/tutorial)
+The best way to get started is by following [our tutorial](http://tilburgsciencehub.com/tutorial).
 
 - Download this repository (either by forking and then cloning, or as a template)
 - Open Terminal in project's main directory, type make

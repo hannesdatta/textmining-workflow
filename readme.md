@@ -18,7 +18,7 @@ The main aim of this repository is to have a clean and basic structure, which ca
 - NLTK dictionaries; open Python, then type
   ```
   import nltk
-  nltk.download('Punkt')
+  nltk.download('punkt')
   ```
   
 - Gnu Make

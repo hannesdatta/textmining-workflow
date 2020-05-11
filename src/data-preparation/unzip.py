@@ -11,7 +11,10 @@ os.makedirs(extract_dir, exist_ok=True)
 # Create a ZipFile Object and load sample.zip in it
 with ZipFile(fn, 'r') as zipObj:
    # Extract all the contents of zip file in different directory
-   zipObj.extractall(extract_dir)
+   try:
+       zipObj.extractall(extract_dir)
+   except:
+       print('error when unzipping the files; check whether all files are available!')
 
 
 f = open('../../gen/data-preparation/temp/unzipping.log','w')

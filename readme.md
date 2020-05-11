@@ -1,4 +1,4 @@
-# Example of a reproducible research worflow: JSON parsing and text mining in Python, R + RMarkdown
+# Example of a reproducible research workflow: JSON parsing and text mining in Python, R + RMarkdown
 
 This is a basic example workflow using GNU Make, Python and R for a reproducible research workflow, following the principles of [tilburgsciencehub.com](http://tilburgsciencehub.com/workflow). Please use this template in combination with our tutorial at [http://tilburgsciencehub.com/tutorial](http://tilburgsciencehub.com/tutorial).
 
@@ -18,7 +18,7 @@ The main aim of this repository is to have a clean and basic structure, which ca
 - NLTK dictionaries; open Python, then type
   ```
   import nltk
-  nltk.download('Punkt')
+  nltk.download('punkt')
   ```
   
 - Gnu Make
